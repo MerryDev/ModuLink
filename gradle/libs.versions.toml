@@ -1,0 +1,10 @@
+[versions]
+logback = "1.5.29"
+
+[libraries]
+logback-core = { module = "ch.qos.logback:logback-core", version.ref = "logback" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+slf4 = { module = "org.slf4j:slf4j-api", version = "2.1.0-alpha1" }
+
+[bundles]
+logging = ["logback-core", "logback-classic", "slf4"]

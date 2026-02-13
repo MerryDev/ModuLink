@@ -2,5 +2,15 @@ plugins {
     id("java")
 }
 
-group = "io.github.merrydev"
-version = "1.0-SNAPSHOT"
+allprojects {
+    group = "io.github.merrydev"
+    version = project.property("version") as String
+}
+
+subprojects {
+    apply(plugin = "java")
+
+    repositories {
+        mavenCentral()
+    }
+}
